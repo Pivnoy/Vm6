@@ -38,8 +38,8 @@ public class MatrixFab {
                 throw new Exception();
             }
             System.out.println("Введите строки матрицы");
-            double [][] matrix = new double[size][size+1];
-            String [][] arr = new String[size][size+1];
+            double [][] matrix = new double[size][size];
+            String [][] arr = new String[size][size];
             for (int i = 0; i < size;i++) {
                 buffer = scanner.nextLine();
                 arr[i] = buffer.trim().split(" ");
@@ -47,7 +47,7 @@ public class MatrixFab {
             }
 
             for (int i = 0; i < size;i++){
-                for (int j = 0; j < size+1;j++) {
+                for (int j = 0; j < size;j++) {
                     matrix[i][j] = Double.parseDouble(arr[i][j].trim());
                 }
             }

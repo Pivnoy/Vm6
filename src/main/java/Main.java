@@ -26,15 +26,13 @@ public class Main {
                 matrix = matrixFab.readMatrixFromFile(fileName);
                 System.out.println("Исходная матрица");
                 printer.printMatrix(matrix);
-                System.out.println("Полученная матрица");
                 choleskyDecomposer.matrixDecomposition(matrix);
             } else if (val == 2){
                 System.out.println("Вы выбрали ввод с клавиатуры");
                 matrix = matrixFab.createMatrixFromKeyBoard();
                 System.out.println("Исходная матрица");
                 printer.printMatrix(matrix);
-                System.out.println("Полученная матрица");
-//                choleskyDecomposer.matrixDecomposition(matrix);
+                choleskyDecomposer.matrixDecomposition(matrix);
             } else {
                 System.out.println("Неизветсная команда");
             }

@@ -20,6 +20,7 @@ public class Printer {
 
     public void printRes(double [][] arr){
         if (arr != null) {
+            System.out.println("Полученная матрица");
             for (int i = 0; i < arr.length; i++) {
                 for (int j = 0; j < arr[i].length; j++) {
                     System.out.print(new BigDecimal(arr[i][j], context));
@@ -28,6 +29,10 @@ public class Printer {
                 System.out.println();
             }
         }
+    }
+
+    public void printErr(){
+        System.out.println("Не выполняется условие положительного определения");
     }
 
 }

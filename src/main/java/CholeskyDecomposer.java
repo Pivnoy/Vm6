@@ -4,6 +4,8 @@ import java.util.Arrays;
 public class CholeskyDecomposer {
 
     private final Printer printer = new Printer();
+    private final Checker checker = new Checker();
+
 
     public void matrixDecomposition(Matrix matrix)
     {
@@ -30,6 +32,10 @@ public class CholeskyDecomposer {
             resMatrix[i][i] = Math.sqrt(temp);
         }
 
-        printer.printRes(resMatrix);
+        if (checker.resultChecker(resMatrix)){
+            printer.printRes(resMatrix);
+        } else {
+            printer.printErr();
+        }
     }
 }
