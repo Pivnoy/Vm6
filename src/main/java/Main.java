@@ -38,6 +38,8 @@ public class Main {
             }
         } catch (NumberFormatException e){
             System.out.println("Неверный формат ввода");
+        } catch (NegativeArraySizeException e){
+            System.out.println("Ошибка ввода с клавиатуры");
         }
     }
 }

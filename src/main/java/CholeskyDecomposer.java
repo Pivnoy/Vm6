@@ -1,4 +1,6 @@
 import javax.inject.Inject;
+import javax.inject.Named;
+import javax.inject.Singleton;
 import java.util.Arrays;
 
 public class CholeskyDecomposer {
